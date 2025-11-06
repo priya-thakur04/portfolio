@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Send, Linkedin } from "lucide-react";
+import { Mail, Phone, Send, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -99,6 +99,25 @@ const Contact = () => {
                       className="text-muted-foreground hover:text-primary transition-colors font-body"
                     >
                       Connect with me
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 rounded-lg glow-effect">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Github className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold mb-1">GitHub</h3>
+                    <a
+                      href="https://github.com/dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors font-body"
+                    >
+                      View my repositories
                     </a>
                   </div>
                 </div>
