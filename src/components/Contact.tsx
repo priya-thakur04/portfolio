@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -80,6 +80,25 @@ const Contact = () => {
                       className="text-muted-foreground hover:text-primary transition-colors font-body"
                     >
                       +91 8837536392
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 rounded-lg glow-effect">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Linkedin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold mb-1">LinkedIn</h3>
+                    <a
+                      href="https://www.linkedin.com/in/priya-9362b8361/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors font-body"
+                    >
+                      Connect with me
                     </a>
                   </div>
                 </div>
