@@ -12,6 +12,7 @@ const Projects = () => {
       tech: ["HTML", "CSS", "JavaScript", "Google Maps API"],
       image: evLocator,
       type: "Hackathon Project",
+      link: null,
     },
     {
       title: "Speed Typing Test",
@@ -19,6 +20,7 @@ const Projects = () => {
       tech: ["HTML", "CSS", "JavaScript"],
       image: speedTyping,
       type: "Web Application",
+      link: "/speedtest.html",
     },
     {
       title: "Data Analysis Mini Project",
@@ -26,6 +28,7 @@ const Projects = () => {
       tech: ["Python", "Pandas", "Matplotlib"],
       image: dataAnalysis,
       type: "Personal Learning",
+      link: null,
     },
   ];
 
@@ -81,6 +84,27 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.link && (
+                  <div className="mt-4">
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
+                      className="w-full group/btn"
+                    >
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                        View Live Demo
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
