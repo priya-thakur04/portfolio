@@ -1,7 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import evLocator from "@/assets/project-ev-locator.jpg";
-import studentMgmt from "@/assets/project-student-mgmt.jpg";
+import speedTyping from "@/assets/project-speed-typing.jpg";
 import dataAnalysis from "@/assets/project-data-analysis.jpg";
 
 const Projects = () => {
@@ -14,11 +14,11 @@ const Projects = () => {
       type: "Hackathon Project",
     },
     {
-      title: "Student Management System",
-      description: "Console-based system for managing student data efficiently with MySQL integration.",
-      tech: ["Python", "MySQL"],
-      image: studentMgmt,
-      type: "Academic Project",
+      title: "Speed Typing Test",
+      description: "Interactive typing test application with real-time WPM tracking, accuracy metrics, and beautiful animations.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: speedTyping,
+      type: "Web Application",
     },
     {
       title: "Data Analysis Mini Project",
