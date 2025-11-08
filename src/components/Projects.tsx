@@ -1,19 +1,12 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import evLocator from "@/assets/project-ev-locator.jpg";
 import speedTyping from "@/assets/project-speed-typing.jpg";
+import expenseTracker from "@/assets/project-expense-tracker.jpg";
+import miniSnake from "@/assets/project-mini-snake.jpg";
 import dataAnalysis from "@/assets/project-data-analysis.jpg";
 
 const Projects = () => {
   const projects = [
-    {
-      title: "EV Charging Station Locator",
-      description: "Prototype web app to help EV users find nearby charging stations using Google Maps API.",
-      tech: ["HTML", "CSS", "JavaScript", "Google Maps API"],
-      image: evLocator,
-      type: "Hackathon Project",
-      link: null,
-    },
     {
       title: "Speed Typing Test",
       description: "Interactive typing test application with real-time WPM tracking, accuracy metrics, and beautiful animations.",
@@ -23,11 +16,27 @@ const Projects = () => {
       link: "/speedtest.html",
     },
     {
-      title: "Data Analysis Mini Project",
-      description: "Data visualization project to identify trends from datasets using Python libraries.",
-      tech: ["Python", "Pandas", "Matplotlib"],
+      title: "Expense Tracker",
+      description: "Personal finance management app with budget tracking, expense categorization, and visual analytics using Chart.js.",
+      tech: ["HTML", "CSS", "JavaScript", "Chart.js"],
+      image: expenseTracker,
+      type: "Web Application",
+      link: "/expense-tracker.html",
+    },
+    {
+      title: "Mini Snake Game",
+      description: "Classic snake game with impossible speed mode, real-time score tracking, and progressive difficulty levels.",
+      tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
+      image: miniSnake,
+      type: "Game Development",
+      link: "/minisnake.html",
+    },
+    {
+      title: "Data Analysis Project",
+      description: "Comprehensive data visualization project analyzing trends and patterns from large datasets using Python libraries.",
+      tech: ["Python", "Pandas", "Matplotlib", "NumPy"],
       image: dataAnalysis,
-      type: "Personal Learning",
+      type: "Data Science",
       link: null,
     },
   ];
