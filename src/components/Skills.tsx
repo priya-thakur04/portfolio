@@ -16,8 +16,8 @@ const Skills = () => {
     },
     {
       icon: Database,
-      title: "Database",
-      skills: ["MySQL"],
+      title: "Database & Libraries",
+      skills: ["MySQL", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
       color: "from-primary/20 to-primary/5",
     },
     {

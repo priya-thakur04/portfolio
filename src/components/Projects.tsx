@@ -34,10 +34,10 @@ const Projects = () => {
     {
       title: "Data Analysis Project",
       description: "Comprehensive data visualization project analyzing trends and patterns from large datasets using Python libraries.",
-      tech: ["Python", "Pandas", "Matplotlib", "NumPy"],
+      tech: ["Python", "Pandas", "Matplotlib", "NumPy", "Seaborn"],
       image: dataAnalysis,
       type: "Data Science",
-      link: null,
+      link: "/data_analysing.ipynb",
     },
   ];
 
