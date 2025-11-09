@@ -5,13 +5,13 @@ const Skills = () => {
     {
       icon: Code2,
       title: "Programming Languages",
-      skills: ["Python"],
+      skills: ["Python", "Java", "C++"],
       color: "from-primary/20 to-primary/5",
     },
     {
       icon: Globe,
       title: "Web Technologies",
-      skills: ["HTML", "CSS", "JavaScript"],
+      skills: ["HTML", "CSS", "JavaScript", "React"],
       color: "from-primary/20 to-primary/5",
     },
     {
@@ -23,7 +23,7 @@ const Skills = () => {
     {
       icon: Wrench,
       title: "Tools",
-      skills: ["VS Code", "Jupyter Notebook"],
+      skills: ["VS Code", "Jupyter Notebook", "Git", "GitHub"],
       color: "from-primary/20 to-primary/5",
     },
     {

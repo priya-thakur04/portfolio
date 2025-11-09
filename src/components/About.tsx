@@ -10,6 +10,11 @@ const About = () => {
           </h2>
           <div className="section-divider w-24 mx-auto" />
         </div>
+        <div className="max-w-2xl mx-auto mb-12 animate-fade-in">
+          <p className="text-lg text-muted-foreground font-body">
+            I am an enthusiastic student specializing in Artificial Intelligence and Machine Learning, driven by a passion for uncovering insights from data. My aspiration is to work as a data analyst, leveraging advanced analytical techniques to solve real-world problems and help organizations make data-driven decisions. I am committed to continuous learning and excited to contribute to the evolving field of data science.
+          </p>
+        </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Education Timeline */}
