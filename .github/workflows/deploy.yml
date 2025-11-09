@@ -1,0 +1,84 @@
+name: Deploy React app to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+# Required for GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - run: npm ci
+      - run: npm test --if-present
+
+  build:
+    name: Build
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      # If you need a base path for Pages, uncomment and set:
+      # - name: Configure base path (Vite example)
+      #   run: echo 'export default { base: "/<REPO_NAME>/" }' > vite.config.base.mjs
+
+      - name: Build
+        run: npm run build
+
+      - name: Detect build output (CRA=build, Vite=dist)
+        id: detect
+        run: |
+          if [ -d dist ]; then echo "out=dist" >> "$GITHUB_OUTPUT";
+          elif [ -d build ]; then echo "out=build" >> "$GITHUB_OUTPUT";
+          else echo "No build output found (dist/build)"; exit 1; fi
+
+      # SPA fallback so client-side routes work on GitHub Pages
+      - name: Add SPA 404 fallback
+        run: |
+          cp "${{ steps.detect.outputs.out }}/index.html" "${{ steps.detect.outputs.out }}/404.html" || true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.detect.outputs.out }}
+
+  deploy:
+    name: Deploy
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
