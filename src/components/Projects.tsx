@@ -14,7 +14,7 @@ const Projects = () => {
       tech: ["HTML", "CSS", "JavaScript"],
       image: speedTyping,
       type: "Web Application",
-      link: "/speedtest.html",
+      link: "/portfolio/speedtest.html",
     },
     {
       title: "Expense Tracker",
@@ -22,7 +22,7 @@ const Projects = () => {
       tech: ["HTML", "CSS", "JavaScript", "Chart.js"],
       image: expenseTracker,
       type: "Web Application",
-      link: "/expense-tracker.html",
+      link: "/portfolio/expense-tracker.html",
     },
     {
       title: "Mini Snake Game",
@@ -30,7 +30,7 @@ const Projects = () => {
       tech: ["HTML", "CSS", "JavaScript", "Canvas API"],
       image: miniSnake,
       type: "Game Development",
-      link: "/minisnake.html",
+      link: "/portfolio/minisnake.html",
     },
     {
       title: "Data Analysis Project",
@@ -38,7 +38,7 @@ const Projects = () => {
       tech: ["Python", "Pandas", "Matplotlib", "NumPy", "Seaborn"],
       image: dataAnalysis,
       type: "Data Science",
-      link: "#",
+      link: null,
       linktext: "In Progress",
     },
   ];
