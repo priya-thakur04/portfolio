@@ -90,13 +90,6 @@ const Hero = () => {
               >
                 Get in Touch
               </Button>
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-body"
-                onClick={() => window.open("/resume.pdf", "_blank")}
-              >
-                View Resume
-              </Button>
             </div>
           </div>
 
