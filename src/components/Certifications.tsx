@@ -4,25 +4,24 @@ type CertModal = "google" | "aws" | null;
 
 const certs = [
     {
-        id: "google",
-        year: "2024",
-        org: "Coursera",
-        title: "Google Data Analytics Professional",
-        fullTitle: "Google Data Analytics Professional Certificate",
+        id: "html-css",
+        year: "2023",
+        org: "Local Training",
+        title: "HTML & CSS Fundamentals",
+        fullTitle: "HTML & CSS Fundamentals Certificate",
         description:
-            "Hands-on specialization covering spreadsheets, SQL, Tableau, and data storytelling with real-world dashboards.",
+            "Comprehensive course covering the basics of HTML and CSS for web development.",
         modalDescription:
-            "Completed eight-course series covering the full analysis lifecycle: asking the right business questions, preparing data with SQL/Sheets, processing and analyzing data in R, and building stakeholder-ready dashboards in Tableau and Looker Studio.",
-        image: "drushcommand.png",
+            "Completed a hands-on course focusing on building responsive web pages using HTML and CSS, including layout techniques and styling best practices.",
+        image: "HTML-CSS.png", // Update with your local image path
         highlights: [
-            "Capstone dashboards presenting bike-share growth recommendations backed by KPI tracking.",
-            "Tooling: Google Sheets, BigQuery, Tableau, R tidyverse.",
-            "Earned professional credential ID GDA-2024-0812.",
+            "Built multiple responsive web pages from scratch.",
+            "Learned about semantic HTML and CSS Flexbox/Grid.",
+            "Credential ID HTML-CSS-2023-001.",
         ],
-        credentialUrl:
-            "https://www.coursera.org/professional-certificates/google-data-analytics",
+        credentialUrl: "#", // No online link available
         credentialLabel: "View Credential",
-        verifiedLabel: "Verified on Coursera",
+        verifiedLabel: "Verified by Local Training",
         verifiedIcon: (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,104 +101,7 @@ const certs = [
             </svg>
         ),
     },
-    {
-        id: "aws",
-        year: "2023",
-        org: "AWS Academy",
-        title: "AWS Academy Cloud Foundations",
-        fullTitle: "AWS Academy Cloud Foundations",
-        description:
-            "Explored global infrastructure, pricing, and Well-Architected best practices for secure workloads.",
-        modalDescription:
-            "Built a solid grounding in the AWS global infrastructure, shared responsibility model, and cost optimization strategies through lab-based learning paths.",
-        image: "masqurade_drupal.png",
-        highlights: [
-            "Provisioned secure VPC architectures with public/private subnets and IAM guardrails.",
-            "Designed serverless workloads combining Lambda, API Gateway, and DynamoDB.",
-            "Credential ID AWS-CF-2023-0411 with 95% assessment score.",
-        ],
-        credentialUrl:
-            "https://www.aws.training/Details/Curriculum?id=27085",
-        credentialLabel: "View Credential",
-        verifiedLabel: "Security focused",
-        verifiedIcon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-shield"
-            >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
-            </svg>
-        ),
-        tags: [
-            {
-                icon: (
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-cloud text-primary"
-                    >
-                        <path d="M17.5 19a4.5 4.5 0 0 0 0-9 7 7 0 0 0-13.8 1"></path>
-                        <path d="M12 19H5a3 3 0 0 1-.3-6"></path>
-                    </svg>
-                ),
-                label: "Cloud Basics",
-            },
-            {
-                icon: (
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-mouse-pointer"
-                    >
-                        <path d="m3 3 7 7-4 4 7 7 8-8-7-7"></path>
-                        <path d="M14 7l3-3"></path>
-                    </svg>
-                ),
-                label: "Tap to view more",
-                highlight: true,
-            },
-        ],
-        cardIcon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-badge-check w-8 h-8 text-primary"
-            >
-                <path d="M15 3.94a7 7 0 1 1-6 0"></path>
-                <path d="M12 7v5"></path>
-                <path d="m9.5 11 2.5 2.5 2.5-2.5"></path>
-            </svg>
-        ),
-    },
+    // Existing certifications (google, aws) can remain here
 ];
 
 const Certifications: React.FC = () => {
