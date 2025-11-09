@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import htmlCSSCert from "@/assets/HTML-CSS.png";
+import aiagentCert from "@/assets/cert-ficate.jpeg";
 
-type CertModal = "google" | "aws" | null;
+type CertModal = "htmlcss" | "aiagent" | null;
 
 const certs = [
     {
@@ -13,7 +15,7 @@ const certs = [
             "Comprehensive course covering the basics of HTML and CSS for web development.",
         modalDescription:
             "Completed a hands-on course focusing on building responsive web pages using HTML and CSS, including layout techniques and styling best practices.",
-        image: "HTML-CSS.png", // Update with your local image path
+        image: htmlCSSCert, // Update with your local image path
         highlights: [
             "Built multiple responsive web pages from scratch.",
             "Learned about semantic HTML and CSS Flexbox/Grid.",
@@ -101,7 +103,104 @@ const certs = [
             </svg>
         ),
     },
-    // Existing certifications (google, aws) can remain here
+    {
+        id: "ai-agent",
+        year: "2023",
+        org: "AI Conference",
+        title: "Participation in AI Agent Talk",
+        fullTitle: "Certificate of Participation in AI Agent Talk",
+        description:
+            "Participated in a panel discussion on the future scope of AI and its applications in various industries.",
+        modalDescription:
+            "Engaged with industry experts to discuss advancements in AI technology and its potential impact on the future.",
+        image: aiagentCert, // Update with your local image path
+        highlights: [
+            "Contributed to discussions on AI ethics and responsible AI.",
+            "Networked with leading AI professionals and researchers.",
+            "Gained insights into emerging trends in AI technology.",
+        ],
+        credentialUrl: "#", // No online link available
+        credentialLabel: "View Credential",
+        verifiedLabel: "Verified by AI Conference",
+        verifiedIcon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-check-circle-2"
+            >
+                <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+            </svg>
+        ),
+        tags: [
+            {
+                icon: (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-check-circle text-primary"
+                    >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                ),
+                label: "Credential Verified",
+            },
+            {
+                icon: (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-mouse-pointer"
+                    >
+                        <path d="m3 3 7 7-4 4 7 7 8-8-7-7"></path>
+                        <path d="M14 7l3-3"></path>
+                    </svg>
+                ),
+                label: "Tap to view more",
+                highlight: true,
+            },
+        ],
+        cardIcon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-award w-8 h-8 text-primary"
+            >
+                <path d="M12 15l-3.5 3.5"></path>
+                <path d="m12 15 3.5 3.5"></path>
+                <circle cx="12" cy="8" r="6"></circle>
+            </svg>
+        ),
+    },
 ];
 
 const Certifications: React.FC = () => {
@@ -215,7 +314,7 @@ const Certifications: React.FC = () => {
                                 ))}
                         </ul>
                         <div className="mt-8 flex flex-wrap gap-4">
-                            <a
+                            {/* <a
                                 href={certs.find(c => c.id === modal)?.credentialUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -228,7 +327,7 @@ const Certifications: React.FC = () => {
                                     <path d="M7 17 17 7"></path>
                                     <path d="M7 7h10v10"></path>
                                 </svg>
-                            </a>
+                            </a> */}
                             <div className="flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-body text-primary">
                                 {certs.find(c => c.id === modal)?.verifiedIcon}
                                 {certs.find(c => c.id === modal)?.verifiedLabel}

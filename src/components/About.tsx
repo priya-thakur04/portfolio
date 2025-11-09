@@ -11,13 +11,37 @@ const About = () => {
           <div className="section-divider w-24 mx-auto" />
         </div>
         <div className="max-w-2xl mx-auto mb-12 animate-fade-in">
-          <p className="text-lg text-muted-foreground font-body">
-            I am an enthusiastic student specializing in Artificial Intelligence and Machine Learning, driven by a passion for uncovering insights from data. My aspiration is to work as a data analyst, leveraging advanced analytical techniques to solve real-world problems and help organizations make data-driven decisions. I am committed to continuous learning and excited to contribute to the evolving field of data science.
-          </p>
+          <div>
+            <p className="text-lg text-muted-foreground font-body">
+              I'm a data analyst who enjoys taking ambiguous problems and turning them into simple, visual answers. I work across Python (pandas, NumPy, scikit-learn), SQL, Power BI/Tableau, and Excel, with a growing focus on AI/ML from my MCA (AI) at Lovely Professional University.
+            </p>
+
+            <h4 className="mt-4 text-base font-semibold font-heading">Recent work</h4>
+            <ul className="list-disc list-inside text-muted-foreground font-body">
+              <li>Interactive KPI dashboards</li>
+              <li>Customer churn prediction</li>
+              <li>SQL pipelines that clean and join multi-source datasets</li>
+            </ul>
+
+            <p className="mt-4 text-lg text-muted-foreground font-body">
+              I care about data quality, reproducible analysis, and telling a clear story for non-technical stakeholders.
+            </p>
+
+            <p className="mt-4 text-lg text-muted-foreground font-body">
+              I'm looking for roles where I can build dashboards, automate analysis, and experiment with ML to improve acquisition, retention, and operations.
+            </p>
+
+            <p className="mt-3 text-sm text-muted-foreground font-body">
+              <strong>Tools:</strong> Python, SQL, Excel, Power BI/Tableau, Git/GitHub, scikit-learn, Matplotlib, Jupyter, Statistics, A/B Testing, ETL.
+            </p>
+          </div>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-8 mb-8">
           {/* Education Timeline */}
+          <h2 className="text-center text-4xl md:text-5xl font-heading font-bold mb-8">
+            My <span className="text-gradient">Journey</span>
+          </h2>
           <div className="glass-card p-8 rounded-lg glow-effect animate-slide-up">
             <div className="flex items-start gap-4 mb-6">
               <div className="p-3 bg-primary/10 rounded-lg">

@@ -112,7 +112,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-heading font-semibold mb-1">GitHub</h3>
                     <a
-                      href="https://github.com/dashboard"
+                      href="https://github.com/priya-thakur04"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors font-body"

@@ -69,7 +69,7 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground max-w-xl font-body">
-              MCA Student | Aspiring Software Developer | Passionate About AI & Emerging Tech
+              Data Analyst | Python, SQL, Power BI, Excel | Turning messy data into clear business decisions | MCA (AI) @ LPU
             </p>
 
             <p className="text-foreground/80 max-w-xl font-body">
@@ -89,6 +89,13 @@ const Hero = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-body"
               >
                 Get in Touch
+              </Button>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-body"
+                onClick={() => window.open("/resume.pdf", "_blank")}
+              >
+                View Resume
               </Button>
             </div>
           </div>
