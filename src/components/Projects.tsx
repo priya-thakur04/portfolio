@@ -4,6 +4,7 @@ import speedTyping from "@/assets/project-speed-typing.jpg";
 import expenseTracker from "@/assets/project-expense-tracker.jpg";
 import miniSnake from "@/assets/project-mini-snake.jpg";
 import dataAnalysis from "@/assets/project-data-analysis.jpg";
+import { link } from "fs";
 
 const Projects = () => {
   const projects = [
@@ -37,7 +38,8 @@ const Projects = () => {
       tech: ["Python", "Pandas", "Matplotlib", "NumPy", "Seaborn"],
       image: dataAnalysis,
       type: "Data Science",
-      link: "/data_analysing.ipynb",
+      link: "#",
+      linktext: "In Progress",
     },
   ];
 
@@ -109,7 +111,7 @@ const Projects = () => {
                         className="flex items-center justify-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
-                        View Live Demo
+                        {project.linktext || "View Live Demo"}
                       </a>
                     </Button>
                   </div>
